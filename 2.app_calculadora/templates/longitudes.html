@@ -1,0 +1,29 @@
+<!-- longitudes.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Conversor de Longitudes</h1>
+    <p>Ingresa la longitud en metros:</p>
+    <form action="/longitudes" method="POST">
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <input type="number" step="any" class="form-control" name="metros" placeholder="Ingresa la longitud en metros" aria-label="Ingresa la longitud en metros" required>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Convertir</button>
+        </div>
+    </form>
+
+    {% if metros is not none %}
+        <div class="results mt-4">
+            <h3>Resultados de Conversion:</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Kilometros: {{ total_km }}</li>
+                <li class="list-group-item">Centimetros: {{ total_cm }}</li>
+                <li class="list-group-item">Pulgadas: {{ total_pulgadas }}</li>
+                <li class="list-group-item">Pies: {{ total_pies }}</li>
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

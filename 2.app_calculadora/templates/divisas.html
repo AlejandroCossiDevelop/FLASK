@@ -1,0 +1,40 @@
+<!-- divisas.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Conversor de Divisas</h1>
+    <p>Ingresa la cantidad y selecciona las divisas:</p>
+    <form action="/divisas" method="POST">
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <input type="number" step="any" class="form-control" name="cantidad" placeholder="Cantidad" required>
+            </div>
+            <div class="col-md-4">
+                <select class="form-control" name="moneda_origen" required>
+                    <option value="" disabled selected>De (moneda de origen)</option>
+                    {% for moneda, tasa in tasas_conversion.items() %}
+                        <option value="{{ moneda }}">{{ moneda }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-control" name="moneda_destino" required>
+                    <option value="" disabled selected>A (moneda de destino)</option>
+                    {% for moneda, tasa in tasas_conversion.items() %}
+                        <option value="{{ moneda }}">{{ moneda }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Convertir</button>
+        </div>
+    </form>
+
+    {% if cantidad_convertida is not none %}
+        <div class="results mt-4">
+            <h3>Resultado de la Conversion:</h3>
+            <p>{{ cantidad }} {{ moneda_origen }} = {{ cantidad_convertida }} {{ moneda_destino }}</p>
+        </div>
+    {% endif %}
+{% endblock %}

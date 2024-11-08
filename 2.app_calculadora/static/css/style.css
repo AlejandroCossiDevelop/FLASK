@@ -1,0 +1,5 @@
+.team-img {
+    width: 100%;
+    height: 250px; /* Ajusta la altura según prefieras */
+    object-fit: cover; /* Recorta y centra la imagen para que se ajuste al tamaño */
+}
