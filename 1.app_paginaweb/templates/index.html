@@ -1,0 +1,30 @@
+<!-- index.html-->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container text-center my-5">
+        <h1 class="display-4 text-danger">Bienvenidos a Avianca</h1>
+        <p class="lead">Vuela con la aerolínea líder en Latinoamérica y descubre el confort y seguridad que solo Avianca puede ofrecer.</p>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0" style="width: 90%;">
+                <img src="/static/img/avianca_fleet.jpg" class="card-img-top rounded-top" style="height: 400px; object-fit: cover;" alt="Flota de Avianca">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Nuestra Flota de Clase Mundial</h5>
+                    <p class="card-text">Explora la emoción de viajar en los aviones más modernos y seguros. En <b>Avianca</b>, te ofrecemos una experiencia de vuelo superior, con una flota moderna y condiciones de viaje de alta calidad.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0" style="width: 90%;">
+                <img src="/static/img/avianca_service.jpg" class="card-img-top rounded-top" style="height: 400px; object-fit: cover;" alt="Servicio de Avianca">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Servicio de Clase Internacional</h5>
+                    <p class="card-text">Con décadas de experiencia, nuestro equipo de servicio y soporte está dedicado a brindarte una atención excepcional en cada vuelo, asegurando que cada viaje sea seguro, cómodo y placentero.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

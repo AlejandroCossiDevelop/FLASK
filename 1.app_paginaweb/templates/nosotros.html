@@ -1,0 +1,83 @@
+<!-- nosotros.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container my-5">
+        <!-- Título y descripción -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary">Sobre Nosotros</h1>
+            <p class="lead text-muted">En Avianca, nos esforzamos por brindarte una experiencia de vuelo segura y cómoda, con más de 100 años de historia conectando a Latinoamérica y el mundo.</p>
+        </div>
+
+        <!-- Misión, Visión y Valores -->
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <h4 class="fw-bold text-secondary">Nuestra Misión</h4>
+                <p>Conectar personas y culturas, brindando experiencias de viaje excepcionales con seguridad y confort.</p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold text-secondary">Nuestra Visión</h4>
+                <p>Ser la aerolínea líder en Latinoamérica, innovando y adaptándonos para ofrecer un servicio de clase mundial.</p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold text-secondary">Nuestros Valores</h4>
+                <p>Integridad, Compromiso, Innovación y Servicio al Cliente.</p>
+            </div>
+        </div>
+        <div class="mb-5">
+            <h2 class="text-center fw-bold text-primary mb-4">Nuestro Equipo</h2>
+            <div class="row g-4">
+                <!-- Miembro del equipo 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/static/img/equipo1.jpg" class="card-img-top team-img" alt="CEO Avianca">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Laura Martínez</h5>
+                            <p class="card-text">CEO de Avianca</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Miembro del equipo 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/static/img/equipo2.jpg" class="card-img-top team-img" alt="COO Avianca">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Carlos García</h5>
+                            <p class="card-text">COO de Avianca</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Miembro del equipo 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/static/img/equipo3.jpg" class="card-img-top team-img" alt="CTO Avianca">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Sofía López</h5>
+                            <p class="card-text">CTO de Avianca</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería de Imágenes -->
+        <div class="mb-5">
+            <h2 class="text-center fw-bold text-primary mb-4">Nuestra Historia en Imágenes</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <img src="/static/img/historia1.jpg" class="img-fluid rounded shadow-sm team-img" alt="Historia Avianca 1">
+                </div>
+                <div class="col-md-3">
+                    <img src="/static/img/historia2.jpg" class="img-fluid rounded shadow-sm team-img" alt="Historia Avianca 2">
+                </div>
+                <div class="col-md-3">
+                    <img src="/static/img/historia3.jpg" class="img-fluid rounded shadow-sm team-img" alt="Historia Avianca 3">
+                </div>
+                <div class="col-md-3">
+                    <img src="/static/img/historia4.jpg" class="img-fluid rounded shadow-sm team-img" alt="Historia Avianca 4">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}
