@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta del Clima</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <!-- Título de la página -->
+        <h1 class="text-center mb-4">Consulta del Clima</h1>
+        <p class="text-muted text-center">Introduce una o varias ciudades separadas por comas para consultar el clima.</p>
+        
+        <!-- Formulario para ingresar ciudades -->
+        <form method="POST" class="mb-4">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" 
+                            placeholder="Ejemplo: Madrid, Bogotá, Nueva York" required>
+                        <button type="submit" class="btn btn-primary px-4">Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+        <!-- Mostrar los datos del clima si existen -->
+        {% if weather_data %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for weather in weather_data %}
+                <div class="col">
+                    <div class="card shadow-sm border-light 
+                        {% if weather.temperature >= 28 %}
+                            bg-danger text-white
+                        {% elif weather.temperature >= 20 %}
+                            bg-warning text-dark
+                        {% else %}
+                            bg-info text-dark
+                        {% endif %}
+                    ">
+                        <div class="card-body text-center">
+                            {% if weather.error %}
+                                <p class="text-danger"><strong>{{ weather.city }}</strong>: {{ weather.error }}</p>
+                            {% else %}
+                                <h6 class="text-muted">{{ weather.city }}</h6>
+                                <h3 class="display-4 fw-bold">{{ weather.temperature }}°C</h3>
+                                <p class="text-muted">Sensación: {{ weather.feels_like }}°C</p>
+                                <p class="text-muted">Min: {{ weather.temp_min }}°C, Max: {{ weather.temp_max }}°C</p>
+                                <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" 
+                                    alt="{{ weather.description }}" class="img-fluid" style="max-width: 100px;">
+                                <p class="text-muted">{{ weather.description | capitalize }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+        &copy; 2024 Consulta del Clima. Todos los derechos reservados.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
