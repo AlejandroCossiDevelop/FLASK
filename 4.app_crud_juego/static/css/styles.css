@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Protest+Revolution&family=Varela+Round&display=swap');
+*{
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-image: url('../img/fondo-negro.jpg');
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-size: cover; 
+  background-position: center; 
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border: 2px solid #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+/* Add shadow effect on hover for buttons */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active navbar toggler */
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+/* Buttons */
+.button-primary {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #FF6347; 
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button-primary:hover {
+  background: #FF4500;
+}
+
+.button-primary:active {
+  transform: translateY(2px);
+}
+
+.button-secondary {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: none;
+  background: #32CD32; /* Cambiado a verde */
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button-secondary:hover {
+  background: #228B22; 
+}
+
+.button-secondary:active {
+  transform: translateY(2px);
+}
+
+/* Transparent Backgrounds */
+.transparent-bg {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.blur-bg {
+  background-color: rgba(72, 128, 250, 0.1);
+  backdrop-filter: blur(15px);
+}
+
+.custom-btn-danger {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #db5c08 !important; 
+  color: white !important;
+  border-radius: 4px;
+}
+
+.custom-btn-danger:hover {
+  background: #ff0000 !important; 
+}
+
+.custom-btn-danger:active {
+  transform: translate(0em, 0.2em);
+}
+
+/* Info button (with blue tones) */
+.custom-btn-info {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #1E90FF !important;
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.custom-btn-info:hover {
+  background: #4682B4 !important;
+}
+
+.custom-btn-info:active {
+  transform: translate(0em, 0.2em);
+}
+
+
+.custom-btn-plus {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #707570 !important;
+  color: white !important; 
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.custom-btn-plus:hover {
+  background: transparent !important;
+}
+
+.custom-btn-plus:active {
+  transform: translate(0em, 0.2em);
+}
+/* Primary button with gradient */
+.custom-btn-primary {
+  align-items: center;
+  background-image: linear-gradient(144deg, #00bfff, #1e90ff); 
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 30%;
+  min-width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* Fondo y estilo del footer */
+.bg-footer {
+  background: #000000b4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0; 
+  color: #fff;
+}
+
+footer h3, footer p {
+  margin: 0;
+}
+
+footer p {
+  color: #b0b0b0;
+}
+
+footer .text-white {
+  color: #fff !important; 
+}
+
+footer .mt-3 a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+footer .mt-3 a:hover {
+  color: #f1c40f; 
+}
+
+footer .mt-3 i {
+  margin-right: 8px; 
+}
+
+footer .mt-3 a:last-child {
+  font-size: 1rem;
+  color: #b0b0b0;
+  transition: color 0.3s ease-in-out;
+}
+
+footer .mt-3 a:last-child:hover {
+  color: #f1c40f;
+}
+
+footer {
+  margin-top: 50px;
+}
+
